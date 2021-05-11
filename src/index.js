@@ -11,6 +11,23 @@ app.register(fastifyMongo, {
     url: 'mongodb+srv://MyTodoApp:MyTodoApp@cluster0.obacx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
   })
 
+  // On créé une route qui retourne tout les livres de notre
+// base de données (MongoDB)
+app.get('/books', async () => {
+    // Mongo est une base de données qui contient des collection
+    // (c'est un peu comme des tables en SQL)
+    // Ici on récupére la collection "books"
+    const collection = app.mongo.db.collection('books')
+  
+    // Sur cette collection nous pouvons utiliser plusieurs
+    // fonctions. Ici, nous allons récupérer TOUT les livres
+    const books = await collection.find().toArray()
+  
+    // Nous retournons tout les livres de la base de données
+    return books
+  })
+  
+
 // on cree une toute fastify sur l"url "/"
 app.get('/', async ()=>{
     return { text : "Welcome"}
