@@ -1,0 +1,24 @@
+{
+  "name": "book-api-test",
+  "version": "1.0.0",
+  "description": "API for a Library",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/welovegsm/book-api-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/welovegsm/book-api-test/issues"
+  },
+  "homepage": "https://github.com/welovegsm/book-api-test#readme",
+  "keywords": [
+    "API",
+    "restfull"
+  ]
+}
