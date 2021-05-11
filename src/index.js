@@ -6,6 +6,11 @@ import fastify from 'fastify'
 // fastify pour afficher des logs
 const app = fastify({ logger: true })
 
+// on cree une toute fastify sur l"url "/"
+app.get('/', async ()=>{
+    return { text : "Welcome"}
+})
+
 // Cette fonction démarre notre server d'api
 const start = async () => {
   console.log('Lancement de notre server ...')
