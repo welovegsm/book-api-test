@@ -2,11 +2,12 @@ GET http://localhost:3000
 
 ###
 
-GET http://localhost:3000/books
+GET http://localhost:3000/books/
+
 
 ###
 
-POST http://localhost:3000/books
+POST http://localhost:3000/books/
 Content-Type: application/json
 
 {
@@ -17,3 +18,16 @@ Content-Type: application/json
   "author": "Alien test",
   "stars": 9
 }
+###
+PATCH http://localhost:3000/books/609a85669bd4fb7f8074420d
+Content-Type: application/json
+
+{
+  "title": "IDPATCH",
+  "description": "ID HElp",
+  "image": "https://images-platform.99static.com//g8_sYzJXM7EFtF-Ri_bCqEsJarQ=/fit-in/590x590/projects-files/44/4474/447491/a076f76d-8ffe-4daa-8b74-cc71d3902ee4.jpg",
+  "price": 1.99,
+  "author": "David meaudo",
+  "stars": 1
+}
+###
